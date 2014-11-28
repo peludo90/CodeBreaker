@@ -77,28 +77,21 @@ public class CodeBreakerTest {
 	public void validateInt(){
 		CodeBreaker codeBreaker = new CodeBreaker();
 
-		assertFalse(codeBreaker.isPositiveInt("1135"));
+		assertTrue(codeBreaker.isValid("1135"));
 	}
 	
 	@Test
 	public void validateIntNegative(){
 		CodeBreaker codeBreaker = new CodeBreaker();
 
-		assertFalse(!codeBreaker.isPositiveInt("-1135"));
+		assertFalse(codeBreaker.isPositiveInt(-1135));
 	}
 	
 	@Test
 	public void validatesString(){
 		CodeBreaker codeBreaker = new CodeBreaker();
 
-		assertFalse(!codeBreaker.isPositiveInt("252F"));
-	}
-	
-	@Test
-	public void validateLong(){
-		CodeBreaker codeBreaker = new CodeBreaker();
-
-		assertFalse(!codeBreaker.isPositiveInt("252F"));
+		assertFalse(codeBreaker.isValid("252F"));
 	}
 	
 	
